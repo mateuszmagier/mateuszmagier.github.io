@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.section-header {
+  text-align: center;
+  font-size: 3em;
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
+.home-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./../img/codemac.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative; }
+  .home-section__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #000051;
+    opacity: .8;
+    z-index: 0; }
+  .home-section__content {
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 0;
+    right: 0;
+    z-index: 1; }
+  .home-section__author {
+    font-weight: 400;
+    font-size: 4em; }
+  .home-section__author-info {
+    font-weight: 300;
+    font-size: 2em;
+    margin-top: 20px; }
+  .home-section .navigation {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 80px;
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-between; }
+    .home-section .navigation__item {
+      border: 2px solid white;
+      background-color: rgba(255, 255, 255, 0);
+      transition: background-color .2s ease-in; }
+      .home-section .navigation__item:hover {
+        background-color: white; }
+    .home-section .navigation__link {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 50px;
+      transition: color .2s ease-in; }
+      .home-section .navigation__link:hover {
+        color: #000051; }
+  .home-section .social {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: inline-flex;
+    justify-content: center;
+    list-style: none;
+    width: 100%; }
+    .home-section .social__item {
+      border-bottom: solid 2px rgba(255, 255, 255, 0);
+      transition: border .2s ease-in; }
+      .home-section .social__item:first-child {
+        margin-right: 10px; }
+      .home-section .social__item:last-child {
+        margin-left: 10px; }
+      .home-section .social__item:hover {
+        border-bottom-color: white; }
+    .home-section .social__link {
+      color: white;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 15px; }
+      .home-section .social__link .fab {
+        font-size: 2em;
+        margin-right: 10px; }
+
+.projects-section {
+  width: 100%;
+  padding-bottom: 50px; }
+
+.categories-list {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+  margin-bottom: 30px; }
+
+.category {
+  padding: 5px 15px;
+  margin: 0 10px;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: all .2s ease-in;
+  border-bottom: 3px solid transparent; }
+  .category:hover, .category.category--active {
+    border-color: #000051; }
+
+.projects-container {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 13px; }
+
+.project {
+  width: 100%;
+  position: relative; }
+  .project:hover .project__info {
+    opacity: 1; }
+  .project__image {
+    width: 100%;
+    display: block; }
+  .project__info {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgba(0, 0, 81, 0.85);
+    opacity: 0;
+    transition: opacity .2s ease-in; }
+  .project__name {
+    font-size: 2em; }
+  .project__description a:visited {
+    color: white; }
+  .project__tags {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .project__tag {
+    background-color: white;
+    font-size: 0.8em;
+    color: #000051;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px 8px;
+    border-radius: 5px; }
+  .project__link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 0.9em;
+    font-weight: 700;
+    border: solid 2px white;
+    position: relative;
+    z-index: 2; }
+    .project__link:first-child {
+      margin-right: 5px; }
+    .project__link:last-child {
+      margin-left: 5px; }
+    .project__link:hover {
+      color: #000051; }
+      .project__link:hover:before {
+        width: 100%; }
+    .project__link:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      z-index: -1;
+      background-color: white;
+      transition: width .2s ease-in; }
+
+/*# sourceMappingURL=style.css.map */
