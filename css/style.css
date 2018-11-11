@@ -115,13 +115,17 @@ body {
   width: 70%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 15px;
   grid-row-gap: 13px; }
 
 .project {
   width: 100%;
-  position: relative; }
+  position: relative;
+  display: none;
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5); }
   .project:hover .project__info {
     opacity: 1; }
   .project__image {
@@ -142,9 +146,11 @@ body {
     opacity: 0;
     transition: opacity .2s ease-in; }
   .project__name {
-    font-size: 2em; }
-  .project__description a:visited {
-    color: white; }
+    font-size: 1.7em; }
+  .project__description {
+    font-size: 0.9em; }
+    .project__description a:visited {
+      color: white; }
   .project__tags {
     width: 80%;
     margin: 0 auto;
@@ -159,6 +165,12 @@ body {
     margin-top: 5px;
     padding: 5px 8px;
     border-radius: 5px; }
+    .project__tag--finished {
+      background-color: green;
+      color: white; }
+    .project__tag--inprogress {
+      background-color: orange;
+      color: white; }
   .project__link {
     color: white;
     text-decoration: none;
@@ -186,5 +198,8 @@ body {
       z-index: -1;
       background-color: white;
       transition: width .2s ease-in; }
+
+.visible {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */
