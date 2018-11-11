@@ -12,8 +12,10 @@ body {
     font-size: 3em;
     padding-top: 50px;
     padding-bottom: 20px;
+    z-index: 1;
 }
 
 @import 'config';
 @import 'home-section';
 @import 'projects-section';
+@import 'skills-section';

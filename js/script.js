@@ -24,4 +24,13 @@ $(function () {
         }
     });
 
+    $('.skills-section__skill').mouseenter(function() {
+        console.log('mouseenter');
+        $(this).children('i').toggleClass('colored');
+    });
+    $('.skills-section__skill').mouseleave(function() {
+        console.log('mouseleave');
+        $(this).children('i').toggleClass('colored');
+    });
+
 });
