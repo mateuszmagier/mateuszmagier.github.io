@@ -5,6 +5,7 @@ $(function () {
     let websitesProjects = $('.project[data-category="websites"]');
     let gamesProjects = $('.project[data-category="games"]');
     let webAppsProjects = $('.project[data-category="web-apps"]');
+    let scroll = new SmoothScroll('a[href*="#"]');
 
     categories.click(function () {
         activeCategory.removeClass('category--active');
