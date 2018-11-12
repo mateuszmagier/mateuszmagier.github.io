@@ -1,7 +1,7 @@
 .home-section {
     height: 100vh;
     width: 100%;
-    background-image: url('./../img/codemac.jpeg');
+    background-image: url('./../img/home-bg.jpeg'); // https://www.burnssheehan.co.uk/storage/images/code%20mac.jpeg
     background-size: cover;
     background-position: bottom;
     position: relative;
@@ -40,7 +40,7 @@
     }
 
     .navigation {
-        width: 50%;
+        width: 30%;
         margin: 0 auto;
         margin-top: 80px;
         list-style: none;
@@ -72,7 +72,7 @@
 
     .social {
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 50px;
         display: inline-flex;
         justify-content: center;
         list-style: none;
@@ -81,14 +81,7 @@
         &__item {
             border-bottom: solid 2px rgba($color: white, $alpha: 0.0);
             transition: border .2s ease-in;
-
-            &:first-child {
-                margin-right: 10px;
-            }
-
-            &:last-child {
-                margin-left: 10px;
-            }
+            margin: 0 15px;
 
             &:hover {
                 border-bottom-color: rgba($color: white, $alpha: 1.0);
@@ -101,16 +94,15 @@
             display: inline-flex;
             align-items: center;
             padding: 10px 15px;
-            // transition: transform .2s ease-in;
 
-            .fab {
+            .fab, .far {
                 font-size: 2em;
                 margin-right: 10px;
             }
+        }
 
-            // &:hover {
-            //     transform: scale(1.1);
-            // }
+        &__link-name {
+            margin-left: 5px;
         }
     }
    

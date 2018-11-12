@@ -1,0 +1,34 @@
+.footer-section {
+    width: 100%;
+    background-color: $color-cod-gray;
+    padding: 20px 0;
+    border-top: 1px solid white;
+    &__content {
+        width: 70%;
+        margin: 0 auto;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-left: solid 2px white;
+        border-right: solid 2px white;
+    }
+    &__copyright {
+        font-size: 0.9em;
+    }
+    &__link {
+        display: inline-block;
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: none;
+        &:hover {
+            transform: rotateX(360deg);
+            transition: all .5s ease-in;
+        }
+        &:visited {
+            color: white;
+        }
+    }
+}

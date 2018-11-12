@@ -15,7 +15,7 @@ body {
 .home-section {
   height: 100vh;
   width: 100%;
-  background-image: url("./../img/codemac.jpeg");
+  background-image: url("./../img/home-bg.jpeg");
   background-size: cover;
   background-position: bottom;
   position: relative; }
@@ -45,7 +45,7 @@ body {
     font-size: 2em;
     margin-top: 20px; }
   .home-section .navigation {
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
     margin-top: 80px;
     list-style: none;
@@ -67,18 +67,15 @@ body {
         color: #000051; }
   .home-section .social {
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 50px;
     display: inline-flex;
     justify-content: center;
     list-style: none;
     width: 100%; }
     .home-section .social__item {
       border-bottom: solid 2px rgba(255, 255, 255, 0);
-      transition: border .2s ease-in; }
-      .home-section .social__item:first-child {
-        margin-right: 10px; }
-      .home-section .social__item:last-child {
-        margin-left: 10px; }
+      transition: border .2s ease-in;
+      margin: 0 15px; }
       .home-section .social__item:hover {
         border-bottom-color: white; }
     .home-section .social__link {
@@ -87,9 +84,11 @@ body {
       display: inline-flex;
       align-items: center;
       padding: 10px 15px; }
-      .home-section .social__link .fab {
+      .home-section .social__link .fab, .home-section .social__link .far {
         font-size: 2em;
         margin-right: 10px; }
+    .home-section .social__link-name {
+      margin-left: 5px; }
 
 .projects-section {
   width: 100%;
@@ -150,7 +149,7 @@ body {
     font-size: 1.7em; }
   .project__description {
     font-size: 0.9em; }
-    .project__description a:visited {
+    .project__description a, .project__description a:visited {
       color: white; }
   .project__tags {
     width: 80%;
@@ -266,5 +265,34 @@ body {
         opacity: 1; }
       .skills-section__skill:hover i {
         transform: translateY(-10px); }
+
+.footer-section {
+  width: 100%;
+  background-color: #111110;
+  padding: 20px 0;
+  border-top: 1px solid white; }
+  .footer-section__content {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-left: solid 2px white;
+    border-right: solid 2px white; }
+  .footer-section__copyright {
+    font-size: 0.9em; }
+  .footer-section__link {
+    display: inline-block;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: none; }
+    .footer-section__link:hover {
+      transform: rotateX(360deg);
+      transition: all .5s ease-in; }
+    .footer-section__link:visited {
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */
