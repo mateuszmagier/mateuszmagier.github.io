@@ -12,9 +12,27 @@
         align-items: center;
         border-left: solid 2px white;
         border-right: solid 2px white;
+
+        @media all and (max-width: 550px) {
+            padding: 10px 0;
+            flex-direction: column;
+        }
+
+        @media all and (max-width: 1200px) {
+            width: 80%;
+        }
+
     }
     &__copyright {
         font-size: 0.9em;
+
+        @media all and (max-width: 550px) {
+            margin-bottom: 20px;
+        }
+
+        @media all and (max-width: 600px) {
+            font-size: 0.8em;
+        }
     }
     &__link {
         display: inline-block;
@@ -23,6 +41,15 @@
         text-decoration: none;
         margin: 0 10px;
         transition: none;
+
+        @media all and (max-width: 550px) {
+            margin: 0 15px;
+        }
+
+        @media all and (max-width: 600px) {
+            font-size: 1.5em;
+        }
+
         &:hover {
             transform: rotateX(360deg);
             transition: all .5s ease-in;

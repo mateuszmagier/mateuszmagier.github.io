@@ -26,17 +26,76 @@
         left: 0;
         right: 0;
         z-index: 1;
+
+        @media all and (max-height: 700px) {
+            top: 20%;
+        }
+
+        @media all and (max-width: 500px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media all and (min-width: 501px) and (max-width: 600px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @media all and (min-width: 601px) and (max-width: 900px) {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 
     &__author {
         font-weight: 400;
         font-size: 4em;
+
+        @media all and (max-width: 500px) {
+            font-size: 2.6em;
+        }
+
+        @media all and (min-width: 501px) and (max-width: 600px) {
+            font-size: 3em;
+        }
+
+        @media all and (min-width: 601px) and (max-width: 900px) {
+            font-size: 3.5em;
+        }
+
+        @media all and (min-width: 1501px) and (max-width: 1800px) {
+            font-size: 4.5em;
+        }
+
+        @media all and (min-width: 1801px) {
+            font-size: 5em;
+        }
     }
 
     &__author-info {
         font-weight: 300;
         font-size: 2em;
         margin-top: 20px;
+
+        @media all and (max-width: 500px) {
+            font-size: 1.4em;
+        }
+
+        @media all and (min-width: 501px) and (max-width: 600px) {
+            font-size: 1.5em;
+        }
+
+        @media all and (min-width: 601px) and (max-width: 900px) {
+            font-size: 1.7em;
+        }
+
+        @media all and (min-width: 1501px) and (max-width: 1800px) {
+            font-size: 2.5em;
+        }
+
+        @media all and (min-width: 1801px) {
+            font-size: 3em;
+        }
     }
 
     .navigation {
@@ -45,12 +104,19 @@
         margin-top: 80px;
         list-style: none;
         display: inline-flex;
-        justify-content: space-between;
+        justify-content: center;
 
         &__item {
             border: 2px solid white;
             background-color: rgba($color: white, $alpha: 0.0);
             transition: background-color .2s ease-in;
+
+            &:first-child {
+                margin-right: 10%;
+            }
+            &:last-child {
+                margin-left: 10%;
+            }
 
             &:hover {
                 background-color: rgba($color: white, $alpha: 1.0);
@@ -61,8 +127,24 @@
             color: white;
             text-decoration: none;
             display: inline-block;
-            padding: 10px 50px;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
             transition: color .2s ease-in;
+
+            @media all and (min-width: 1501px) and (max-width: 1800px)  {
+                width: 180px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 1.5em;
+            }
+    
+            @media all and (min-width: 1801px) {
+                width: 200px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 1.5em;
+            }
 
             &:hover {
                 color: $color-stratos;
@@ -78,10 +160,23 @@
         list-style: none;
         width: 100%;
 
+        @media all and (min-width: 1501px) and (max-width: 1800px) {
+            margin-top: 80px;
+        }
+
+        @media all and (min-width: 1801px) {
+            margin-top: 100px;
+        }
+
         &__item {
             border-bottom: solid 2px rgba($color: white, $alpha: 0.0);
             transition: border .2s ease-in;
             margin: 0 15px;
+
+            @media all and (min-width: 1501px) {
+                font-size: 1.3em;
+                margin: 0 40px;
+            }
 
             &:hover {
                 border-bottom-color: rgba($color: white, $alpha: 1.0);
@@ -98,11 +193,21 @@
             .fab, .far {
                 font-size: 2em;
                 margin-right: 10px;
+                
+                @media all and (max-width: 600px) {
+                    font-size: 1.5em;
+                    margin-right: 5px;
+                }
             }
         }
 
         &__link-name {
             margin-left: 5px;
+
+            @media all and (max-width: 600px) {
+                margin-left: 2px;
+                font-size: 0.9em;
+            }
         }
     }
    
