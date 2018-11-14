@@ -8,6 +8,18 @@ $(function () {
     let scroll = new SmoothScroll('a[href*="#"]');
     const fadeInDuration = 600;
 
+    const showArrowOffset = $('#home-section').height();
+
+    $(document).scroll(function() {
+        const pos = $(this).scrollTop();
+        
+        if(pos > showArrowOffset) {
+            $('.up-button').fadeIn(300);
+        } else {
+            $('.up-button').fadeOut(300);
+        }
+    });
+
     categories.click(function () {
         activeCategory.removeClass('category--active');
         activeCategory = $(this); // change active category
