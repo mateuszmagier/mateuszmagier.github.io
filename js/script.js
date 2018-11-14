@@ -6,21 +6,22 @@ $(function () {
     let gamesProjects = $('.project[data-category="games"]');
     let webAppsProjects = $('.project[data-category="web-apps"]');
     let scroll = new SmoothScroll('a[href*="#"]');
+    const fadeInDuration = 600;
 
     categories.click(function () {
         activeCategory.removeClass('category--active');
         activeCategory = $(this); // change active category
         $(this).addClass('category--active');
+        allProjects.fadeOut(0);
         if (activeCategory.hasClass('category--all')) { // 'all' category
-            allProjects.addClass('visible');
+            allProjects.fadeIn(fadeInDuration);
         } else { // other category
-            allProjects.removeClass('visible');
             if (activeCategory.hasClass('category--websites')) {
-                websitesProjects.addClass('visible');
+                websitesProjects.fadeIn(fadeInDuration);
             } else if (activeCategory.hasClass('category--games')) {
-                gamesProjects.addClass('visible');
+                gamesProjects.fadeIn(fadeInDuration);
             } else if (activeCategory.hasClass('category--web-apps')) {
-                webAppsProjects.addClass('visible');
+                webAppsProjects.fadeIn(fadeInDuration);
             }
         }
     });
