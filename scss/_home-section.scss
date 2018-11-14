@@ -22,32 +22,21 @@
         color: white;
         position: absolute;
         width: 100%;
-        top: 30%;
+        top: 25%;
         left: 0;
         right: 0;
         z-index: 1;
 
-        @media all and (max-height: 500px) {
+        @media all and (max-width: 350px) {
+            top: 5%;
+        }
+
+        @media all and (min-width: 351px) and (max-height: 500px) {
+            top: 10%;
+        }
+
+        @media all and (min-height: 501px) and (max-height: 600px) {
             top: 15%;
-        }
-
-        @media all and (min-height: 501px) and (max-height: 700px) {
-            top: 20%;
-        }
-
-        @media all and (max-width: 500px) {
-            width: 70%;
-            margin: 0 auto;
-        }
-
-        @media all and (min-width: 501px) and (max-width: 600px) {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        @media all and (min-width: 601px) and (max-width: 900px) {
-            width: 90%;
-            margin: 0 auto;
         }
     }
 
@@ -55,20 +44,16 @@
         font-weight: 400;
         font-size: 4em;
 
-        @media all and (max-height: 500px) {
-            font-size: 2.6em;
+        @media all and (max-width: 350px) {
+            font-size: 2.2em;
         }
 
-        @media all and (max-width: 500px), (max-height: 500px) {
-            font-size: 2.6em;
+        @media all and (min-width: 351px) and (max-width: 500px), (max-height: 500px) {
+            font-size: 2.4em;
         }
 
-        @media all and (min-width: 501px) and (max-width: 600px) {
+        @media all and (min-width: 501px) and (max-width: 900px) and (min-height: 501px) {
             font-size: 3em;
-        }
-
-        @media all and (min-width: 601px) and (max-width: 900px) and (min-height: 501px) {
-            font-size: 3.5em;
         }
 
         @media all and (min-width: 1501px) and (max-width: 1800px) {
@@ -86,15 +71,13 @@
         margin-top: 20px;
 
         @media all and (max-width: 500px), (max-height: 500px) {
-            font-size: 1.4em;
+            font-size: 1.3em;
+            padding: 0 10%;
         }
 
-        @media all and (min-width: 501px) and (max-width: 600px) {
+        @media all and (min-width: 501px) and (max-width: 900px) and (min-height: 501px) {
             font-size: 1.5em;
-        }
-
-        @media all and (min-width: 601px) and (max-width: 900px) and (min-height: 501px) {
-            font-size: 1.7em;
+            padding: 0 10%;
         }
 
         @media all and (min-width: 1501px) and (max-width: 1800px) {
@@ -115,7 +98,17 @@
         justify-content: center;
 
         @media all and (max-height: 500px) {
-            margin-top: 40px;
+            margin-top: 30px;
+        }
+
+        @media all and (max-width: 900px) and (min-height: 501px) and (max-height: 600px) {
+            margin-top: 50px;
+        }
+
+        @media all and (orientation: portrait) and (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
         }
 
         &__item {
@@ -125,9 +118,18 @@
 
             &:first-child {
                 margin-right: 10%;
+
+                @media all and (orientation: portrait) and (max-width: 900px) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
             }
             &:last-child {
                 margin-left: 10%;
+
+                @media all and (orientation: portrait) and (max-width: 900px) {
+                    margin-left: 0;
+                }
             }
 
             &:hover {
@@ -143,6 +145,10 @@
             height: 40px;
             line-height: 40px;
             transition: color .2s ease-in;
+
+            @media all and (orientation: portrait) and (max-width: 900px) {
+                width: 100%;
+            }
 
             @media all and (min-width: 1501px) and (max-width: 1800px)  {
                 width: 180px;
@@ -172,8 +178,16 @@
         list-style: none;
         width: 100%;
 
+        @media all and (max-height: 350px) {
+            display: none;
+        }
+
         @media all and (max-height: 500px) {
-            margin-top: 25px;
+            margin-top: 15px;
+        }
+
+        @media all and (max-width: 900px) and (min-height: 501px) and (max-height: 600px) {
+            margin-top: 30px;
         }
 
         @media all and (min-width: 1501px) and (max-width: 1800px) {
@@ -209,20 +223,14 @@
             .fab, .far {
                 font-size: 2em;
                 margin-right: 10px;
-                
-                @media all and (max-width: 600px) {
-                    font-size: 1.5em;
-                    margin-right: 5px;
-                }
             }
         }
 
         &__link-name {
             margin-left: 5px;
 
-            @media all and (max-width: 600px) {
-                margin-left: 2px;
-                font-size: 0.9em;
+            @media all and (max-width: 500px) {
+                display: none;
             }
         }
     }
