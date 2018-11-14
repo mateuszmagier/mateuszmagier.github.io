@@ -226,5 +226,37 @@
             }
         }
     }
+
+    .scroll-down-wrapper {
+        position: absolute;
+        left: 0;
+        right: 0;        
+        bottom: 15px;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .scroll-down {
+        text-decoration: none;
+        color: white;
+
+        &:hover span {
+            opacity: 1;
+        }
+
+        span {
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            opacity: .5;
+        }
+
+        .fa-chevron-down {
+            font-size: 1.2em;
+            animation-name: scrollDownAnimation;
+            animation-iteration-count: infinite;
+            animation-duration: 1.5s;
+        }
+    }
    
 }
+

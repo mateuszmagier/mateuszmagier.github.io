@@ -5,13 +5,21 @@ $(function () {
     let websitesProjects = $('.project[data-category="websites"]');
     let gamesProjects = $('.project[data-category="games"]');
     let webAppsProjects = $('.project[data-category="web-apps"]');
-    let scroll = new SmoothScroll('a[href*="#"]');
+    let scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 800
+    });
     const fadeInDuration = 600;
 
     const showArrowOffset = $('#home-section').height();
 
     $(document).scroll(function() {
         const pos = $(this).scrollTop();
+
+        if(pos > 0) {
+            $('.scroll-down-wrapper').fadeOut(300);
+        } else {
+            $('.scroll-down-wrapper').fadeIn(300);
+        }
         
         if(pos > showArrowOffset) {
             $('.up-button').fadeIn(300);
