@@ -5,6 +5,7 @@ $(function () {
     let websitesProjects = $('.project[data-category="websites"]');
     let gamesProjects = $('.project[data-category="games"]');
     let webAppsProjects = $('.project[data-category="web-apps"]');
+    let desktopAppsProjects = $('.project[data-category="desktop-apps"]');
     let scroll = new SmoothScroll('a[href*="#"]', {
         speed: 800
     });
@@ -42,6 +43,8 @@ $(function () {
                 gamesProjects.fadeIn(fadeInDuration);
             } else if (activeCategory.hasClass('category--web-apps')) {
                 webAppsProjects.fadeIn(fadeInDuration);
+            } else if (activeCategory.hasClass('category--desktop-apps')) {
+                desktopAppsProjects.fadeIn(fadeInDuration);
             }
         }
     });
